@@ -1,4 +1,4 @@
-Get Date/Time By Time Zone
+Time Zone to Date/Time
 ========================
 
 A CFC with functions (for Server-Side & Client-Side) to obtain a DateTime string value from a supplied Time Zone ID.
@@ -12,7 +12,7 @@ For a list of Time Zone IDs, you can retrieve a returned array like so:
 A full call to the CFC can be done in 2 lines:
 
 ```
-dt = createObject("component", "path.to.cfc.DateTimeByTimeZone");
+dt = createObject("component", "path.to.cfc.TimeZoneToDateTime");
 writeOutput( dt.getDateTimeByTimeZone("America/New_York") );
 // Example Result: 2014-09-17 20:55:07
 ```
@@ -35,7 +35,7 @@ This example makes use of [jstz-1.0.4.min.js](https://bitbucket.org/pellepim/jst
 			var timezone = jstz.determine();
 			console.log("Time Zone ID: "+timezone.name());
 			$.ajax({
-				url: "DateTimeByTimeZone.cfc",
+				url: "TimeZoneToDateTime.cfc",
 				type: "GET",
 				data: {method: "remoteDateTimeByTimeZone", timeZone: timezone.name()},
 				dataType: "JSON"
