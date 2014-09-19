@@ -1,4 +1,4 @@
-component name="DateTimeByTimeZone"
+component name="TimeZoneToDateTime"
 	output="false"
 {
 	public any function init() {
