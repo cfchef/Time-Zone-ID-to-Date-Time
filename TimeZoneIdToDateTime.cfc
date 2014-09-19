@@ -1,4 +1,4 @@
-component name="TimeZoneToDateTime"
+component name="TimeZoneIdToDateTime"
 	output="false"
 {
 	public any function init() {
@@ -7,7 +7,7 @@ component name="TimeZoneToDateTime"
 
 	// This function is used directly on the server side where you already 
 	// have the Time Zone ID to supply. 
-	public function getDateTimeByTimeZone(required string timeZone = "")
+	public function getDateTimeByTimeZoneId(required string timeZone = "")
 		output="false"
 	{
 		var jTimeZone = createObject("java", "java.util.TimeZone");
@@ -24,7 +24,7 @@ component name="TimeZoneToDateTime"
 
 	// This function is used along with a AJAX call that passes in a Time Zone ID
 	// that was obtained from the client-side via JavaScript. 
-	remote function remoteDateTimeByTimeZone(required string timeZone = "")
+	remote function remoteDateTimeByTimeZoneId(required string timeZone = "")
 		output="false"
 		returnFormat="JSON"
 	{
