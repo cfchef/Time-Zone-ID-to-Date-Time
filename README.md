@@ -1,7 +1,7 @@
 Time Zone to Date/Time
 ========================
 
-A CFC with functions (for Server-Side & Client-Side) to obtain a DateTime string value from a supplied Time Zone ID.
+A ColdFusion approach via a CFC with functions, for Server-Side & Client-Side, that use underlying Java methods to obtain a DateTime string value from a supplied Time Zone ID.
 
 ## Server-Side Example...
 
