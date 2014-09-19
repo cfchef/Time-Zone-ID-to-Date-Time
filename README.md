@@ -1,5 +1,5 @@
-Time Zone to Date/Time
-========================
+Time Zone Id to Date/Time
+==========================
 
 A ColdFusion approach via a CFC with functions, for Server-Side & Client-Side, that use underlying Java methods to obtain a DateTime string value from a supplied Time Zone ID.
 
@@ -12,8 +12,8 @@ For a list of Time Zone IDs, you can retrieve a returned array like so:
 A full call to the CFC can be done in 2 lines:
 
 ```
-dt = createObject("component", "path.to.cfc.TimeZoneToDateTime");
-writeOutput( dt.getDateTimeByTimeZone("America/New_York") );
+dt = createObject("component", "path.to.cfc.TimeZoneIdToDateTime");
+writeOutput( dt.getDateTimeByTimeZoneId("America/New_York") );
 // Example Result: 2014-09-17 20:55:07
 ```
 
@@ -24,7 +24,7 @@ This example makes use of [jstz-1.0.4.min.js](https://bitbucket.org/pellepim/jst
 ```
 <html lang="en-us">	
 	<head>
-		<title>Get Date/Time By Time Zone Examples</title>
+		<title>Get Date/Time By Time Zone Id AJAX Example</title>
 		<meta charset="utf-8">
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jstimezonedetect/1.0.4/jstz.min.js"></script>
 		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -37,7 +37,7 @@ This example makes use of [jstz-1.0.4.min.js](https://bitbucket.org/pellepim/jst
 			$.ajax({
 				url: "TimeZoneToDateTime.cfc",
 				type: "GET",
-				data: {method: "remoteDateTimeByTimeZone", timeZone: timezone.name()},
+				data: {method: "remoteDateTimeByTimeZoneId", timeZone: timezone.name()},
 				dataType: "JSON"
 			}).done(function(result) {
 				$(".call").append(result);
