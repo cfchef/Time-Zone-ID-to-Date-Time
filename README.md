@@ -12,8 +12,8 @@ For a list of Time Zone IDs, you can retrieve a returned array like so:
 A full call to the CFC can be done in 2 lines:
 
 ```
-dt = createObject("component", "path.to.cfc.TimeZoneIdToDateTime");
-writeOutput( dt.getDateTimeByTimeZoneId("America/New_York") );
+dt = createObject("component", "path.to.cfc.TimeZoneIDToDateTime");
+writeOutput( dt.getDateTimeByTimeZoneID("America/New_York") );
 // Example Result: 2014-09-17 20:55:07
 ```
 
@@ -33,11 +33,11 @@ This example makes use of [jstz-1.0.4.min.js](https://bitbucket.org/pellepim/jst
 	<body>
 		<script type="text/javascript">
 			var timezone = jstz.determine();
-			console.log("Time Zone ID: "+timezone.name());
+			console.log("Time Zone ID: " + timezone.name());
 			$.ajax({
-				url: "TimeZoneToDateTime.cfc",
+				url: "TimeZoneIDToDateTime.cfc",
 				type: "GET",
-				data: {method: "remoteDateTimeByTimeZoneId", timeZone: timezone.name()},
+				data: {method: "remoteDateTimeByTimeZoneID", timeZoneID: timezone.name()},
 				dataType: "JSON"
 			}).done(function(result) {
 				$(".call").append(result);
