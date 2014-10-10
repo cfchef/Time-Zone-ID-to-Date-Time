@@ -15,7 +15,7 @@ component name="TimeZoneIDToDateTime"
 		var jSimpleDateFormat = createObject("java", "java.text.SimpleDateFormat").init("yyyy-MM-dd HH:mm:ss");
 
 		if (!arrayFind(timeZones, arguments.timeZone)) {
-			throw(message = "Not a valid Time Zone ID.", detail = "Refer to results from java.util.TimeZone.getAvailableIDs()");
+			throw(message = "Not a valid Time Zone ID.", detail = "Available Time Zone IDs: " & serializeJSON(timeZones));
 		}
 		jSimpleDateFormat.setTimeZone(jTimeZone.getTimeZone(arguments.timeZone));
 
