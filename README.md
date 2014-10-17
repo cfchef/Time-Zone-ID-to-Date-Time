@@ -22,6 +22,7 @@ writeOutput( dt.getDateTimeByTimeZoneID("America/New_York") );
 This example makes use of [jstz-1.0.4.min.js](https://bitbucket.org/pellepim/jstimezonedetect/downloads) and [jQuery](http://jquery.com/download/).
 
 ```
+<!DOCTYPE html>
 <html lang="en-us">	
 	<head>
 		<title>Get Date/Time By Time Zone ID AJAX Example</title>
