@@ -11,7 +11,7 @@ For a list of Time Zone IDs, you can retrieve a returned array like so:
 
 A full call to the CFC can be done in 2 lines:
 
-```
+```coldfusion-cfc
 dt = createObject("component", "path.to.cfc.TimeZoneIDToDateTime");
 writeOutput( dt.getDateTimeByTimeZoneID("America/New_York") );
 // Example Result: 2014-09-17 20:55:07
@@ -21,7 +21,7 @@ writeOutput( dt.getDateTimeByTimeZoneID("America/New_York") );
 
 This example makes use of [jstz-1.0.4.min.js](https://bitbucket.org/pellepim/jstimezonedetect/downloads) and [jQuery](http://jquery.com/download/).
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en-us">	
 	<head>
